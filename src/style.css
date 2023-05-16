@@ -6,3 +6,35 @@ body {
     font-family: "Karla", sans-serif;
     margin: 0;
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    color: white;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    padding: 25px;
+}
+
+.header--title, .header--subtitle {
+    margin: 0;
+}
+
+.header--title {
+    font-weight: 700;
+    font-size: 20.75px;
+    letter-spacing: -0.1em;
+    margin-right: auto;
+}
+
+.header--subtitle {
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.header--image {
+    height: 26px;
+    margin-right: 7px;
+}
