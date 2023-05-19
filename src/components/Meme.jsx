@@ -21,6 +21,15 @@ export default function Meme() {
         }))
     }
 
+    function handleChange(event) {
+        let {name, value} = event.target
+
+        setMeme((prevMeme) => ({
+            ...prevMeme,
+            [name] : value
+        }))
+    }
+
     return (
         <main className="meme">
             <div className="meme--form">
@@ -28,11 +37,17 @@ export default function Meme() {
                     className="meme--top" 
                     type="text" 
                     placeholder="Top text"
+                    onChange={handleChange}
+                    name="topText"
+                    value={meme.topText}
                 />
                 <input 
                     className="meme--bottom" 
                     type="text" 
                     placeholder="Bottom text"
+                    onChange={handleChange}
+                    name="bottomText"
+                    value={meme.bottomText}
                 />
                 <button 
                     className="meme--submit" 
@@ -42,7 +57,11 @@ export default function Meme() {
                 </button> 
             </div>
 
-            <img className="meme--img" src={meme.randomImage}/>
+            <div className="meme">
+                <img src={meme.randomImage} className="meme--img" />
+                <h2 className="meme--text top">{meme.topText}</h2>
+                <h2 className="meme--text bottom">{meme.bottomText}</h2>
+            </div>
         </main>
     )
 }
