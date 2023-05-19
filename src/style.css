@@ -9,9 +9,6 @@ body {
 
 main {
     padding: 36px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .header {
@@ -89,11 +86,14 @@ main {
 
 .meme {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .meme--img {
     border-radius: 5px;
-    max-width: 100%;
+    max-width: 80%;
 }
 
 .meme--text {
